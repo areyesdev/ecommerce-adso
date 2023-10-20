@@ -1,24 +1,19 @@
-// creamos una interfaz llamada SeedProduct 
 interface SeedProduct {
   description: string;
   images: string[];
   inStock: number;
   price: number;
+  sizes: ValidSizes[];
   slug: string;
   tags: string[];
   title: string;
   type: ValidTypes;
-  gender: 'mouse' | 'streaming' | 'keyboard' | 'kits' | 'accessories';
+  gender: 'hombre' | 'mujer' | 'unisex';
 }
 
-type ValidTypes =
-  | 'wireless'
-  | 'wired'
-  | 'beginners'
-  | 'intermediate'
-  | 'advanced';
+type ValidSizes = 'XS' | 'S' | 'M' | 'L' | 'XL' | 'XXL' | '3XL';
+type ValidTypes = 'camisetas' | 'buzos' | 'gorras';
 
-// esta interfaz es creada para cuando queramos crear usuarios anticipados
 interface SeedData {
   products: SeedProduct[];
 }
@@ -27,65 +22,315 @@ export const initialData: SeedData = {
   products: [
     {
       description:
-        'Audífono inalámbrico multiplataforma con conexión 2.4 GHz y TRRS 3.5 mm, Desplázate por el universo como un planeta interestelar. La calidad de audio y el tiempo de respuesta mínimo se verán reflejados eternamente, desde el PC gaming hasta la portabilidad multiplataforma.',
-      images: ['Gravity-01.png', 'Gravity-02.png', 'Gravity-03.png'],
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Android_M1_B.jpg', 'Android_M1_N.jpg'],
       inStock: 7,
-      price: 393000,
-      slug: 'streaming_gravity',
-      type: 'wireless',
-      tags: ['gamming'],
-      title: 'Gravity',
-      gender: 'streaming',
+      price: 69000,
+      sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
+      slug: 'camiseta-logo-cent-developer-android',
+      type: 'camisetas',
+      tags: ['sweatshirt'],
+      title: 'Camiseta Developer Android',
+      gender: 'hombre',
     },
     {
       description:
-        'Teclado mecánico de tamaño completo con interruptores Kailh. La luminosidad del sistema estelar de Orión se refleja en la estrella más grande de esta constelación. Siente el estado de pureza máximo en Alnilam White Edition. El equilibrio del universo se complementa con la imponencia de Alnilam Black Edition. Desde su interior emergen todos los colores de la nebulosa de Orión.',
-      images: ['Alnilam-01.png', 'Alnilam-02.png', 'Alnilam-03.png'],
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Angular_M1_B.jpg', 'Angular_M1_B.jpg'],
       inStock: 5,
-      price: 200000,
-      slug: 'keyboard_Alnila',
-      type: 'wired',
-      tags: ['keyboard'],
-      title: 'keyboard Alnilam',
-      gender: 'keyboard',
+      price: 69000,
+      sizes: ['XS', 'S', 'M', 'XL', 'XXL'],
+      slug: 'camiseta-logo-cent-developer-angular',
+      type: 'camisetas',
+      tags: ['angular'],
+      title: 'Camiseta Developer Angular',
+      gender: 'hombre',
     },
-
     {
       description:
-        'Teclado mecánico de tamaño TKL con interruptores Kailh azul, rojo o marrón. En el universo donde el gaming reina, el asterismo de Orión junta la energía y pureza de todas sus estrellas para encapsularla en el aura de Alnitak White Edition. La inmensidad del espacio exterior es infinitamente oscura, pero su verdadera energía emerge del sistema estelar, explayándose en el espectro de Alnitak Black Edition.',
-      images: ['Alnitak-01.png', 'Alnitak-02.png', 'Alnitak-03.png'],
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Archlinux1_B.jpg', 'Archlinux1_N.jpg'],
+      inStock: 13,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+      slug: 'camiseta-logo-cent-developer-archlnux',
+      type: 'camisetas',
+      tags: ['archlinux'],
+      title: 'Camiseta Arch Linux',
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Aws_M1_B.jpg', 'Aws_M1_N.jpg'],
+      inStock: 50,
+      price: 45,
+      sizes: ['XS', 'S', 'M', 'L'],
+      slug: 'camiseta-logo-cent-developer-aws',
+      type: 'camisetas',
+      tags: ['aws'],
+      title: 'Camiseta AWS',
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Aws_Azure_M1_B.jpg', 'Aws_Azure_M1.jpg'],
+      inStock: 50,
+      price: 40,
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      slug: 'camiseta-logo-cent-developer-aws-azure',
+      type: 'camisetas',
+      tags: ['azure', 'aws'],
+      title: 'Camiseta Azure - AWS',
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Azure_M1_B.jpg', 'Azure_M1_N.jpg'],
+      inStock: 0,
+      price: 35,
+      sizes: ['M', 'L', 'XL', 'XXL'],
+      slug: 'camiseta-logo-cent-developer-azure',
+      type: 'camisetas',
+      tags: ['azure'],
+      title: "Camiseta Azure",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
       inStock: 15,
-      price: 200000,
-      slug: 'keyboard_Alnitak',
-      type: 'wired',
-      tags: ['keyboard'],
-      title: 'keyboard Alnitak',
-      gender: 'keyboard',
-    },
-
-    {
-      description:
-        'Teclado mecánico de tamaño 60% con interruptores Kailh, azul, rojo o marrón. El astro más pequeño pero más brillante del cinturón de Orión. Todo lo que tenías en nuestra estrella Mintaka ahora en presentación de máxima pureza y elegancia.La inmensidad del espacio exterior es infinitamente oscura, pero su verdadera energía emerge del sistema estelar, concentrándose en el espectro de Mintaka Black Edition.',
-      images: ['Mintaka-01.png', 'Mintaka-02.png', 'Mintaka-03.png'],
-      inStock: 4,
-      price: 200000,
-      slug: 'keyboard_Mintaka',
-      type: 'wireless',
-      tags: ['keyboard'],
-      title: 'keyboard Mintaka',
-      gender: 'keyboard',
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
     },
     {
       description:
-        'Micrófono unidireccional por conexión USB tipo-C, trípode, potenciómetro.Omkara se enfoca con precisión en tu voz, sonido o mensaje. Estos llegarán directamente al micrófono, por lo que el ruido ambiente se aislará de su enfoque. Tendrás el control absoluto de cada palabra, nota o respiración.A la hora de mutear, la acción será completamente silenciosa. Está equipado con un botón de mute completamente silencioso y táctil. Tu última expresión será el punto y final, ese cierre magistral que dejará a tu mensaje brillar con éxito.',
-      images: ['Omkara-1.png', 'Omkara-2.png', 'Omkara-3.png'],
-      inStock: 10,
-      price: 200000,
-      slug: 'microphone_Omkara',
-      type: 'wired',
-      tags: ['microphone'],
-      title: 'microphone Omkara',
-      gender: 'streaming',
+        'Buzo con capota y bolsillo tipo canguro en tela algodón perchado calidad nacional patprimo. Estampado en vinilo textil de Alta calidad. *Material suave con la piel, resistente y de excelente calidad.',
+      images: ['HOODIE-14.2.jpg', 'HOODIE-14.1.jpg'],
+      inStock: 15,
+      price: 126000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'buzo-you-are-special',
+      type: 'buzos',
+      tags: ['special'],
+      title: "Buzo especial",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
+    },
+    {
+      description:
+        'La camiseta tradicional de toda la vida Corte recto, clásico y holgado Tejido grueso de 180 g/m² de gramaje, colores lisos en algodón sanforizado. El color gris jaspeado es 90 % algodón y 10 % poliéster; el denim jaspeado es 50 % poliéster. Cuello y dobladillos con doble puntada para una mayor durabilidad La imprenta independiente que imprime este producto ha sido evaluada de acuerdo con los estándares de la Organización Internacional del Trabajo.La imprenta independiente que imprime este producto obtiene sus materiales de fabricantes comprometidos con la mejora de las prácticas de cultivo de algodón.',
+      images: ['Css_M1_B.jpg', 'Css_M1_N.jpg'],
+      inStock: 15,
+      price: 69000,
+      sizes: ['S', 'M', 'L', 'XL'],
+      slug: 'camiseta-logo-cent-developer-css',
+      type: 'camisetas',
+      tags: ['css'],
+      title: "Camiseta CSS",
+      gender: 'hombre',
     },
   ],
 };
