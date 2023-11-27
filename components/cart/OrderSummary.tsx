@@ -1,7 +1,7 @@
 import { Grid, Typography } from '@mui/material'
 import React from 'react'
 
-export const OrderSumary = () => {
+export const OrderSummary = () => {
   return (
     <Grid container>
       <Grid item xs={6}>
