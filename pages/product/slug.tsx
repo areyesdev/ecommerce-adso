@@ -5,7 +5,7 @@ import { initialData } from '../../database/products';
 import { ItemCounter } from "../../components/ui";
 
 
-const product = initialData.products[0]
+const product = initialData.products[0] 
 
 const ProductPage = () => {
   return (
